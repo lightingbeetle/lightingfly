@@ -1,4 +1,2 @@
-lightingfly
-===========
-
-SCSS Mixins Library 
+# Lighting Fly
+## SCSS Mixins Library 
