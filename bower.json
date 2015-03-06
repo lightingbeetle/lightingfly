@@ -1,0 +1,17 @@
+{
+  "name": "lightingfly",
+  "version": "0.2.0",
+  "homepage": "http://lf.lbstudio.sk/",
+  "authors": [
+    "Vladimir Pittner <pittner@lbstudio.sk>"
+  ],
+  "description": "Lighting Fly is simple and fast SCSS Mixins Library that contains mixins and functions for cross-browser use of modern CSS properties, and simply tricks to speed up your work.",
+  "main": "_lighting_fly.scss",
+  "keywords": [
+    "scss",
+    "mixins",
+    "library",
+    "lightingfly"
+  ],
+  "license": "WTFPL-2.0"
+}
