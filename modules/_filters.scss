@@ -1,0 +1,41 @@
+// ---------------------------------------------
+// FILTERS
+// ---------------------------------------------
+
+@mixin opacity(
+  $opacity) {
+            filter: alpha(opacity = $opacity * 100);
+            opacity: $opacity;
+}
+
+@mixin filter-blur(
+  $blur) {
+    -webkit-filter: blur($blur);
+            filter: blur($blur);
+}
+
+// IMPORTANT - svg file is needed
+// <svg xmlns="http://www.w3.org/2000/svg">
+//  <filter id="grayscale">
+//      <feColorMatrix type="matrix" values="0.3333 0.3333 0.3333 0 0
+//                                       0.3333 0.3333 0.3333 0 0
+//                                       0.3333 0.3333 0.3333 0 0
+//                                       0 0 0 1 0"/>
+//  </filter>
+// </svg>
+@mixin filter-grayscale(
+  $percents) {
+    @if $percents != 0 {
+              filter: url(svg/filters.svg#grayscale);
+              filter: grayscale($percents * 100 ); 
+      -webkit-filter: grayscale($percents * 100 ); 
+              filter: gray;
+      -webkit-filter: grayscale($percents);
+    }
+    @else {
+              filter: grayscale(0); 
+      -webkit-filter: grayscale(0); 
+              filter: none; 
+      -webkit-filter: grayscale(0); 
+    }
+}

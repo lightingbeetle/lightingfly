@@ -40,6 +40,7 @@
   }
   #{$selector} {
     display: inline-block;
+    vertical-align: middle;
   }
 }
 
@@ -59,4 +60,71 @@
     }
     #{$property} : -webkit-calc(#{unquote($calc)});
     #{$property} : calc(#{unquote($calc)});
+}
+
+// -------------------------------
+// MULTICOLUMN CSS LAYOUTS
+
+@mixin columns(
+  $columns) {
+  
+    -webkit-columns: $columns;
+       -moz-columns: $columns;
+            columns: $columns;
+}
+
+@mixin column-count(
+  $count) {
+  
+    -webkit-column-count: $count;
+       -moz-column-count: $count;
+            column-count: $count;
+}
+
+@mixin column-gap(
+  $gap) {
+  
+    -webkit-column-gap: $gap;
+       -moz-column-gap: $gap;
+            column-gap: $gap;
+}
+
+@mixin column-rule(
+  $rule) {
+  
+    -webkit-column-rule: $rule;
+       -moz-column-rule: $rule;
+            column-rule: $rule;
+}
+
+@mixin column-rule-color(
+  $rule-color) {
+  
+    -webkit-column-rule-color: $rule-color;
+       -moz-column-rule-color: $rule-color;
+            column-rule-color: $rule-color;
+}
+
+@mixin column-rule-style(
+  $rule-style) {
+  
+    -webkit-column-rule-style: $rule-style;
+       -moz-column-rule-style: $rule-style;
+            column-rule-style: $rule-style;
+}
+
+@mixin column-rule-width(
+  $rule-width) {
+  
+    -webkit-column-rule-width: $rule-width;
+       -moz-column-rule-width: $rule-width;
+            column-rule-width: $rule-width;
+}
+
+@mixin column-width(
+  $width) {
+  
+    -webkit-column-width: $width;
+       -moz-column-width: $width;
+            column-width: $width;
 }
